@@ -311,5 +311,11 @@ tags
 !.vscode/*.code-snippets
 
 passenger_wsgi.py
+public/
+tmp/
+stderr.log
+static/
+
+
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,visualstudiocode,pycharm,django,venv,dotenv
