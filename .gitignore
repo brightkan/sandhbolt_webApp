@@ -314,7 +314,7 @@ passenger_wsgi.py
 public/
 tmp/
 stderr.log
-static/
+/static/
 
 
 
