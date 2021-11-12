@@ -1,0 +1,37 @@
+{%extends "./base.html" %}
+{%block jumbotron%}
+  {%include "components/sliders.html"%}
+{%endblock%}
+{%block content%}
+    <div id="colorlib-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 animate-box">
+                    <div class="box text-center">
+                        <span class="yr">SINCE</span>
+                        <span class="num">{{company_profile.since}}</span>
+                    </div>
+                </div>
+                <div class="col-md-8 animate-box">
+                    <p>{{company_profile.about}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="colorlib-statements">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 colorlib-heading" style="text-align: center">
+                    <h2><span class="thick">Vision</span></h2>
+                    <p>{{company_profile.vision}}</p>
+
+                    <h2><span class="thick">Mission</span></h2>
+                    <p>{{company_profile.mission}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "components/subscribe.html" %}
+    {% include "components/footer.html"    %}
+
+{%endblock%}

@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from webApp.models import Project
+from webApp.models.slider_image import SliderImage
+from webApp.models.project import Project
 from webApp.models.review import Review
 from webApp.models.client import Client
 from webApp.models.social_media_links import SocialMediaLink
@@ -14,3 +15,4 @@ admin.site.register(SocialMediaLink)
 admin.site.register(Client)
 admin.site.register(Review)
 admin.site.register(Project)
+admin.site.register(SliderImage)

@@ -1,0 +1,21 @@
+<aside id="colorlib-hero">
+    <div class="flexslider">
+        <ul class="slides">
+            {%for slider_image in company_profile.sliderimage_set.all %}
+            <li style="background-image: url({{slider_image.picture.url}});">
+                <div class="overlay"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
+                            <div class="slider-text-inner text-center">
+                                <h2>{{slider_image.subtitle}}</h2>
+                                <h1>{{slider_image.title}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+</aside>

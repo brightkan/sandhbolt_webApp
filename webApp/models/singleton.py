@@ -1,7 +1,7 @@
 from django.db import models
 
-class SingletonModel(models.Model):
 
+class SingletonModel(models.Model):
     class Meta:
         abstract = True
 

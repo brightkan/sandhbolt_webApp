@@ -1,0 +1,58 @@
+<footer id="colorlib-footer" role="contentinfo">
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-4 colorlib-widget">
+                <h4>More About Company</h4>
+                <p>The company engages in infrastructure planning, Design and construction and maintainance as
+                    well as General trading</p>
+                <p>
+                <p>
+                <ul class="colorlib-social-icons">
+                    <li><a href="{{company_profile.social_media_links.twitter}}"><i class="icon-twitter"></i></a></li>
+                    <li><a href="{{company_profile.social_media_links.facebook}}"><i
+                            class="icon-facebook"></i></a></li>
+                    <li><a href="{{company_profile.social_media_links.linkedin}}"><i class="icon-linkedin"></i></a></li>
+                    <li><a href="company_profile.social_media_links.youtube"><i class="icon-youtube"></i></a></li>
+                    <li><a href="company_profile.social_media_links.instagram"><i class="icon-instagram"></i></a></li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 colorlib-widget">
+                <h4>Information</h4>
+                <p>
+                    <a href="{{company_profile.profile_pdf.url }}" download>
+                        <button class="btn btn-danger">Download Company Profile</button>
+                    </a>
+                </p>
+                <p>You can download the company profile to view more information about us.</p>
+            </div>
+
+            <div class="col-md-3 col-md-push-1">
+                <h4>Contact Info</h4>
+                <ul class="colorlib-footer-links">
+                    <li>{{company_profile.contact_info.location}}</li>
+                    <li><a><i class="icon-phone"></i>{{company_profile.contact_info.phone_number}}</a></li>
+                    <li><a href="mailto:{{company_profile.contact_info.email}}"><i class="icon-envelope"></i>
+                        {{company_profile.contact_info.email}}
+                    </a>
+                    </li>
+                    <li><a href="http://sandhbolt.com"><i class="icon-location4"></i>{{company_profile.contact_info.website}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <small class="block">Copyright &copy;
+                        <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                        All rights reserved. Sandhbolt (U) LTD.
+                        Developed by <a href="https://brightkan.tk" target="_blank">Bright Kanyange</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
