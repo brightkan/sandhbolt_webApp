@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-
 # Create your views here.
 from webApp.models import GalleryImage
 from webApp.models.project import Project
@@ -35,3 +34,33 @@ def gallery_page(request):
         "gallery_images": gallery_images
     }
     return render(request, "gallery.html", context)
+
+
+def services_page(request):
+    context = {
+        "services": "active",
+        "page_title": "Services",
+        "page_subtitle": "What we do?",
+        "banner_image": "4.jpg",
+    }
+    return render(request, "services.html", context)
+
+
+def about_page(request):
+    context = {
+        "about": "active",
+        "page_title": "About Us",
+        "page_subtitle": "Company Info",
+        "banner_image": "5.jpg",
+    }
+    return render(request, "about.html", context)
+
+
+def contact_page(request):
+    context = {
+        "contact": "active",
+        "page_title": "Contact Us",
+        "page_subtitle": "Get in Touch",
+        "banner_image": "5.jpg",
+    }
+    return render(request, "contact.html", context)

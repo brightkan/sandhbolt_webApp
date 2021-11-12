@@ -1,0 +1,38 @@
+{%extends "./base.html" %}
+{%load static%}
+{%block jumbotron%}
+{%include "components/banner.html"%}
+{%endblock%}
+{%block content%}
+    <div id="colorlib-about">
+			<div class="container">
+				.<div class="row row-pb-lg">
+					<div class="col-md-6">
+						<div class="about animate-box">
+							<h2>Welcome to our Company</h2>
+							<p>
+									Sandhbolt Limited is a legally
+									registered company to carry out
+									business in Uganda and elsewhere
+									and aspects of engineering and trading
+									fields.</p>
+									<p>The company engages in design and
+									construction of engineering
+									structures such as water works,
+									buildings and roads, supervision of
+									the structures, maintenance of
+									engineering projects, sanitation
+									promotion management and
+									assessment and general trading.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img class="img-responsive" src="{% static 'images/bannerImages/1.jpg' %}" alt="About Image">
+					</div>
+				</div>
+			</div>
+		</div>
+{% include "components/subscribe.html" %}
+{% include "components/footer.html"    %}
+
+{%endblock%}

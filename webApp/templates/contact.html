@@ -1,0 +1,44 @@
+{%extends "./base.html" %}
+{%block jumbotron%}
+{%include "components/banner.html"%}
+{%endblock%}
+{%block content%}
+<div id="colorlib-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 animate-box">
+                <h2>Contact Information</h2>
+                <div class="row contact-info-wrap">
+                    <div class="col-md-3">
+                        <p><span><i class="icon-location-2"></i></span>{{company_profile.contact_info.location}}</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><span><i class="icon-phone3"></i></span>{{company_profile.contact_info.phone_number}}</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><span><i class="icon-paperplane"></i></span>
+                            <a href="mailto:{{company_profile.contact_info.email}}">
+                                {{company_profile.contact_info.email}}
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <p><span><i class="icon-globe"></i></span>
+                            <a href="{{company_profile.contact_info.website}}">{{company_profile.contact_info.website}}</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 col-md-offset-1 animate-box">
+                <h2>Get In Touch</h2>
+                <iframe class="clickup-embed clickup-dynamic-height"
+                        src="https://forms.clickup.com/f/6x13h-324/VLYB1NUWU3TLIO5BFK" onwheel="" width="100%"
+                        height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                <script async src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "components/subscribe.html" %}
+{% include "components/footer.html"    %}
+
+{%endblock%}
