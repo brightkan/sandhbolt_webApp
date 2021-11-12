@@ -26,3 +26,7 @@ class SliderImage(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+    def delete(self, using=None, keep_parents=False):
+        self.picture.delete()
+        super().delete()
