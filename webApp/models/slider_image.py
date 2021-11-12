@@ -28,5 +28,8 @@ class SliderImage(models.Model):
         return f"{self.title}"
 
     def delete(self, using=None, keep_parents=False):
-        self.picture.delete()
+        try:
+            self.picture.delete()
+        except ObjectDoesNotExist:
+            pass
         super().delete()

@@ -17,7 +17,7 @@
     <meta name="twitter:image" content=""/>
     <meta name="twitter:url" content=""/>
     <meta name="twitter:card" content=""/>
-    <link rel="icon" href="images/logo.png"/>
+    <link rel="icon" href="{{company_profile.logo.url}}"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700" rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{% static 'css/animate.css'%}">
@@ -42,4 +42,38 @@
     <!--[if lt IE 9]>
     <script src="{% static 'js/respond.min.js' %}"></script>
     <![endif]-->
+    	<!-- Core CSS file -->
+	<link rel="stylesheet" href="{% static 'photoSwipe/photoswipe.css' %}">
+
+	<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+	<link rel="stylesheet" href="{% static 'photoSwipe/default-skin/default-skin.css' %}">
+
+	<!-- Core JS file -->
+	<script src="{% static 'photoSwipe/photoswipe.min.js' %}"></script>
+
+	<!-- UI JS file -->
+	<script src="{% static 'photoSwipe/photoswipe-ui-default.min.js' %}"></script>
+
+	<style>
+		.my-gallery {
+			width: 100%;
+			float: left;
+		}
+		.my-gallery img {
+			width: 100%;
+			height: auto;
+		}
+		.my-gallery figure {
+			display: block;
+			float: left;
+			margin: 0 5px 5px 0;
+			width: 150px;
+		}
+		.my-gallery figcaption {
+			display: none;
+		}
+	</style>
 </head>

@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+from webApp.models.gallery_image import GalleryImage
 from webApp.models.slider_image import SliderImage
 from webApp.models.project import Project
 from webApp.models.review import Review
@@ -16,3 +17,4 @@ admin.site.register(Client)
 admin.site.register(Review)
 admin.site.register(Project)
 admin.site.register(SliderImage)
+admin.site.register(GalleryImage)

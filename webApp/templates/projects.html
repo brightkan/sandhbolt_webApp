@@ -1,0 +1,50 @@
+{%extends "./base.html" %}
+{%block jumbotron%}
+{%include "components/banner.html"%}
+{%endblock%}
+{%block content%}
+<div id="colorlib-project">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 animate-box colorlib-heading animate-box">
+                <span class="sm">Works</span>
+                <h2><span class="thin">Our Done</span> <span class="thick">Projects</span></h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <th>Client</th>
+                    <th>Year</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Role</th>
+                    <th>Location</th>
+                    </thead>
+                    {%for project in projects_list%}
+                    <tr>
+                        <td>
+                            <a href="{{project.client.website}}" target="_blank">
+                                <img src="{{project.client.logo.url}}"
+                                     height="50"
+                                     width="50"
+                                     alt="{{project.client}}"/>
+                            </a>
+                        </td>
+                        <td>{{project.started| date:"Y"}}</td>
+                        <td>{{project.title}}</td>
+                        <td>{{project.description}}</td>
+                        <td>{{project.role}}</td>
+                        <td>{{project.location}}
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "components/subscribe.html" %}
+{% include "components/footer.html"    %}
+
+{%endblock%}
