@@ -1,0 +1,25 @@
+{%extends "./base.html" %}
+{%block jumbotron%}
+{%include "components/banner.html"%}
+{%endblock%}
+{%block content%}
+<div id="colorlib-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 animate-box">
+                <h2>404 Error</h2>
+                <div class="row contact-info-wrap">
+                    <div class="col-md-3">
+                        <a href="{%url 'home_page'%}">
+                            <button class="btn btn-primary">Get Back</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "components/subscribe.html" %}
+{% include "components/footer.html"    %}
+
+{%endblock%}

@@ -64,3 +64,13 @@ def contact_page(request):
         "banner_image": "5.jpg",
     }
     return render(request, "contact.html", context)
+
+
+def _404_page(request, exception):
+    context = {
+        "_404_page": "active",
+        "page_title": "Page Not Found",
+        "page_subtitle": "404",
+        "banner_image": "5.jpg",
+    }
+    return render(request, "404.html", context)
