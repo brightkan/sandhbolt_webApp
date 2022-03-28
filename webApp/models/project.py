@@ -11,4 +11,4 @@ class Project(models.Model):
     picture = models.ImageField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.role}"
