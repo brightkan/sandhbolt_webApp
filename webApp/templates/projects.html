@@ -25,11 +25,11 @@
                     <tr>
                         <td>{{project.year}}</td>
                         <td>
-                         {{project.client.name}}
+                         {{project.client.name|title}}
                         </td>
-                        <td>{{project.description}}</td>
-                        <td>{{project.role}}</td>
-                        <td>{{project.location}}
+                        <td>{{project.description|title}}</td>
+                        <td>{{project.role|title}}</td>
+                        <td>{{project.location|title}}
                     </tr>
                     {%endfor%}
                 </table>
