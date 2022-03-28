@@ -24,10 +24,10 @@
                     </thead>
                     {%for project in projects_list%}
                     <tr>
+                        <td>{{project.started| date:"Y"}}</td>
                         <td>
                          {{project.client.name}}
                         </td>
-                        <td>{{project.started| date:"Y"}}</td>
                         <td>{{project.title}}</td>
                         <td>{{project.description}}</td>
                         <td>{{project.role}}</td>
