@@ -25,12 +25,7 @@
                     {%for project in projects_list%}
                     <tr>
                         <td>
-                            <a href="{{project.client.website}}" target="_blank">
-                                <img src="{{project.client.logo.url}}"
-                                     height="50"
-                                     width="50"
-                                     alt="{{project.client}}"/>
-                            </a>
+                         {{project.client.name}}
                         </td>
                         <td>{{project.started| date:"Y"}}</td>
                         <td>{{project.title}}</td>
