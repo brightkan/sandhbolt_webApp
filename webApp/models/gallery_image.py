@@ -19,7 +19,7 @@ def create_path_gallery_image(instance, filename):
 
 
 class GalleryImage(models.Model):
-    caption = models.CharField(max_length=100)
+    caption = models.CharField(max_length=100, default="Civil Engineering")
     picture = models.ImageField(upload_to=create_path_gallery_image)
     thumbnail = models.CharField(max_length=2000, blank=True, null=True)
 
