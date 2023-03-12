@@ -10,5 +10,9 @@ class Project(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     picture = models.ImageField(blank=True, null=True)
 
+    class Meta:
+        ordering = ['-year']
+        verbose_name_plural = 'Projects'
+
     def __str__(self):
         return f"{self.role}"
