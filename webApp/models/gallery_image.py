@@ -1,10 +1,9 @@
-import os
-
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 import base64
 from io import BytesIO
 from PIL import Image
+import os
 
 
 def create_path_gallery_image(instance, filename):
@@ -30,12 +29,18 @@ class GalleryImage(models.Model):
         if not self.picture:
             self.thumbnail = None
         else:
-            thumbnail_size = 120, 120
+            thumbnail_size = (120, 120)
+            img = Image.open(self.picture)
+            img.thumbnail(thumbnail_size, Image.ANTIALIAS)
+            width, height = img.size
+            left = (width - thumbnail_size[0]) / 2
+            top = (height - thumbnail_size[1]) / 2
+            right = (width + thumbnail_size[0]) / 2
+            bottom = (height + thumbnail_size[1]) / 2
+            img = img.crop((left, top, right, bottom))
             data_img = BytesIO()
-            tiny_img = Image.open(self.picture)
-            tiny_img.thumbnail(thumbnail_size)
-            tiny_img.save(data_img, format="BMP")
-            tiny_img.close()
+            img.save(data_img, format="BMP")
+            img.close()
             try:
                 self.thumbnail = "data:image/jpg;base64,{}".format(
                     base64.b64encode(data_img.getvalue()).decode("utf-8")
@@ -49,6 +54,6 @@ class GalleryImage(models.Model):
         try:
             self.picture.delete()
             self.thumbnail.delete()
-        except ObjectDoesNotExist:
+        except (ObjectDoesNotExist, AttributeError):
             pass
         super().delete()
