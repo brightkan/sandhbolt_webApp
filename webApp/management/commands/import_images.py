@@ -27,4 +27,7 @@ class Command(BaseCommand):
                 # save the instance
                 gallery_image.save()
 
+        # Output success message
+        self.stdout.write(self.style.SUCCESS('Successfully imported gallery images'))
+
 
