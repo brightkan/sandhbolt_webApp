@@ -21,6 +21,12 @@ class GalleryImage(models.Model):
     caption = models.CharField(max_length=100, default="Civil Engineering")
     picture = models.ImageField(upload_to=create_path_gallery_image)
     thumbnail = models.CharField(max_length=2000, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = "Gallery Images"
+        verbose_name = "Gallery Image"
+        ordering = ["-created_at"]
 
     def __str__(self):
         return f"{self.caption}"
